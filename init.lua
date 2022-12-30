@@ -11,6 +11,10 @@ local shouldDrawGUI = true
 
 local searchText = ""
 
+local function trim(s)
+    return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
 local function DrawMainWindow()
     if not openGUI then return end
     openGUI, shouldDrawGUI = ImGui.Begin('Example Icon App', openGUI)
